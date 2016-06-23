@@ -14,7 +14,6 @@
 		1898F7C51D1BBE2F00511258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */; };
 		1898F7D01D1BBE3000511258 /* CHCubicBezierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7CF1D1BBE3000511258 /* CHCubicBezierTests.swift */; };
 		1898F7DB1D1BBE3000511258 /* CHCubicBezierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */; };
-		1898F7E91D1BBE4C00511258 /* CHCubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7E81D1BBE4C00511258 /* CHCubicBezier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		1898F7D61D1BBE3000511258 /* CHCubicBezierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHCubicBezierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCubicBezierUITests.swift; sourceTree = "<group>"; };
 		1898F7DC1D1BBE3000511258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1898F7E81D1BBE4C00511258 /* CHCubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHCubicBezier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				1898F7C11D1BBE2F00511258 /* Assets.xcassets */,
 				1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */,
 				1898F7C61D1BBE2F00511258 /* Info.plist */,
-				1898F7E81D1BBE4C00511258 /* CHCubicBezier.swift */,
 			);
 			path = CHCubicBezier;
 			sourceTree = "<group>";
