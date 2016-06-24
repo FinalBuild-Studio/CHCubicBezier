@@ -19,7 +19,7 @@ Why CubicBezier instead of CoreAnimation
 =====================================
 There are some CoreAnimation APIs provide for Bezier timing function, see ![CAMediaTimingFunction - getControlPointAtIndex](https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522057-getcontrolpointatindex?language=objc).
 
-However, the old APIs need to interact with C pointers. Of course, I'm not that familar to interact with C pointer, even though ![Apple's document here](https://developer.apple.com/swift/blog/?id=6) also said `Swift works hard to make interaction with C pointers convenient, because of their pervasiveness within Cocoa, while providing some level of safety`. And all of all, the document is really unreadable. 
+However, the old APIs need to interact with C pointers. Of course, I'm not that familar to interact with C pointer, even though ![Apple's document here](https://developer.apple.com/swift/blog/?id=6) also said `Swift works hard to make interaction with C pointers convenient, because of their pervasiveness within Cocoa, while providing some level of safety`. And most important, the document is really unreadable. 
 
 Here is the problem what CubicBezier wants to solve, calculating B(t) value for building customized animation.
 
