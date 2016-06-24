@@ -26,7 +26,11 @@ class CubicBezier {
     // Hmmmmm, Actually, I don't know why the source code have samples table
     // Or it should be removed?
     private lazy var sampleValues: [Double] = {
-        return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.mX1, aA2: self.mX2) }
+        if self.mX1 != self.mY1 || self.mX2 != self.mY2 {
+            return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.mX1, aA2: self.mX2) }
+        } else {
+            return []
+        }
     }()
     
     private let mX1: Double
