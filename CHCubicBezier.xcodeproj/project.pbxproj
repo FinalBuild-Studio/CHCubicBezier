@@ -14,6 +14,7 @@
 		1898F7C51D1BBE2F00511258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */; };
 		1898F7D01D1BBE3000511258 /* CHCubicBezierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7CF1D1BBE3000511258 /* CHCubicBezierTests.swift */; };
 		1898F7DB1D1BBE3000511258 /* CHCubicBezierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */; };
+		1898F7EC1D1BCBD300511258 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7EB1D1BCBD300511258 /* CubicBezier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1898F7D61D1BBE3000511258 /* CHCubicBezierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHCubicBezierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCubicBezierUITests.swift; sourceTree = "<group>"; };
 		1898F7DC1D1BBE3000511258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1898F7EB1D1BCBD300511258 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1898F7C11D1BBE2F00511258 /* Assets.xcassets */,
 				1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */,
 				1898F7C61D1BBE2F00511258 /* Info.plist */,
+				1898F7EB1D1BCBD300511258 /* CubicBezier.swift */,
 			);
 			path = CHCubicBezier;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 		1898F7AF1D1BBE2F00511258 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CH;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = CapsLock;
@@ -258,6 +262,7 @@
 			files = (
 				1898F7BD1D1BBE2F00511258 /* ViewController.swift in Sources */,
 				1898F7BB1D1BBE2F00511258 /* AppDelegate.swift in Sources */,
+				1898F7EC1D1BCBD300511258 /* CubicBezier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
