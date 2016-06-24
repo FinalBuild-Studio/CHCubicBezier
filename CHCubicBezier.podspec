@@ -27,7 +27,7 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.author             = { "Calvin" => "calvin.peak@gmail.com" }
+  s.author             = { "Calvin" => "calvin.peak@capslock.tw" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # s.platform     = :ios
