@@ -33,7 +33,7 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
   # s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
@@ -44,7 +44,7 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "CubicBezier.swift"
+  s.source_files  = "CHCubicBezier/CubicBezier.swift"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
