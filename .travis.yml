@@ -2,4 +2,4 @@ language: objective-c
 before_install:
     - brew update
     - brew install xctool
-script: xctool -workspace CHCubicBezier.xcworkspace -scheme CHCubicBezier -sdk iphonesimulator test
+script: xctool -project CHCubicBezier.xcodeproj -scheme CHCubicBezier -sdk iphonesimulator test
