@@ -18,7 +18,7 @@ private let subdevisionMaxInterations: Int = 10
 private let kSplineTableSize: Int = 11
 private let kSampleStepSize: Double = 1.0 / (Double(kSplineTableSize) - 1.0)
 
-class CubicBezier {
+public class CubicBezier {
     private let A: ((aA1: Double, aA2: Double) -> Double) = { return 1.0 - 3.0 * $1 + 3.0 * $0 }
     private let B: ((aA1: Double, aA2: Double) -> Double) = { return 3.0 * $1 - 6.0 * $0 }
     private let C: ((aA1: Double) -> Double) = { return 3.0 * $0 }
@@ -38,7 +38,7 @@ class CubicBezier {
     private let mY1: Double
     private let mY2: Double
     
-    init(mX1 outerMX1: Double, mY1 outerMY1: Double, mX2 outerMX2: Double, mY2 outerMY2: Double) {
+    public init(mX1 outerMX1: Double, mY1 outerMY1: Double, mX2 outerMX2: Double, mY2 outerMY2: Double) {
         assert((outerMX1 >= 0 && outerMX1 <= 1 && outerMX2 >= 0 && outerMX2 <= 1), "Bezier x values must be in [0, 1] range")
         
         mX1 = outerMX1
@@ -129,7 +129,7 @@ class CubicBezier {
     }
     
     // MARK: - Public Methods
-    func easing(x: Double) -> Double {
+    public func easing(x: Double) -> Double {
         if x == 0 || x == 1 {
             return x
         }

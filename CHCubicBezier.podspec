@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "CHCubicBezier"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "CHCubicBezier provides Cubic-Bezier Curve easing calculating."
 
   s.description  = <<-DESC
@@ -27,24 +27,24 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.author             = { "Calvin" => "calvin.peak@gmail.com" }
+  s.author             = { "Calvin" => "calvin.peak@capslock.tw" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   # s.platform     = :ios
   # s.platform     = :ios, "5.0"
 
-  s.ios.deployment_target = "7.0"
+  s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/CapsLock-Studio/CHCubicBezier.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/CapsLock-Studio/CHCubicBezier.git", :tag => "1.0.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "CubicBezier.swift"
+  s.source_files  = "CHCubicBezier/CubicBezier.swift"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
