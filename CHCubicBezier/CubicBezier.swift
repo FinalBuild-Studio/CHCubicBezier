@@ -29,7 +29,7 @@ public class CubicBezier {
         if self.mX1 != self.mY1 || self.mX2 != self.mY2 {
             return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.mX1, aA2: self.mX2) }
         } else {
-            return []
+            return [Double](count: kSplineTableSize, repeatedValue: 0)
         }
     }()
     
@@ -80,7 +80,7 @@ public class CubicBezier {
             }
             
             index += 1
-        } while (abs(currentT) > subdevusuibPrecision && index < subdevisionMaxInterations)
+        } while (abs(currentX) > subdevusuibPrecision && index < subdevisionMaxInterations)
         
         return currentT
     }
@@ -130,7 +130,7 @@ public class CubicBezier {
     
     // MARK: - Public Methods
     public func easing(x: Double) -> Double {
-        if x == 0 || x == 1 {
+        if (mX1 == mY1 && mX2 == mY2) || x == 0 || x == 1 {
             return x
         }
         
