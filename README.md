@@ -30,6 +30,7 @@ let cubicBezier = CubicBezier(mX1: 0, mY1: 0, mX2: 1, mY2: 0.5)
 let duraing: Int = 3  // Seconds
 var countingNumber: Int = 0
 for time in duraing {
-    print("Count: \(countingNumber + cubicBezier(time / duraing)), At time: \(time)")
+    countingNumber = countingNumber + cubicBezier(time / duraing)
+    print("Count: \(countingNumber), At time: \(time)")
 }
 ```
