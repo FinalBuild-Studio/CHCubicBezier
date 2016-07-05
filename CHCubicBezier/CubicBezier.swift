@@ -19,6 +19,29 @@ private let kSplineTableSize: Int = 11
 private let kSampleStepSize: Double = 1.0 / (Double(kSplineTableSize) - 1.0)
 
 public class CubicBezier {
+    public enum Easing {
+        case Ease
+        case EaseIn
+        case EaseOut
+        case EaseInOut
+        case Linear
+        
+        func toControlPoints() -> (Double, Double, Double, Double) {
+            switch self {
+            case .Ease:
+                return (0.25, 0.1, 0.25, 0.1)
+            case .EaseIn:
+                return (0.42, 0.0, 1.0, 1.0)
+            case .EaseOut:
+                return (0.0, 0.0, 0.58, 1.0)
+            case .EaseInOut:
+                return (0.42, 0.0, 0.58, 1.0)
+            case .Linear:
+                return (0, 0, 1, 1)
+            }
+        }
+    }
+
     private let A: ((aA1: Double, aA2: Double) -> Double) = { return 1.0 - 3.0 * $1 + 3.0 * $0 }
     private let B: ((aA1: Double, aA2: Double) -> Double) = { return 3.0 * $1 - 6.0 * $0 }
     private let C: ((aA1: Double) -> Double) = { return 3.0 * $0 }
@@ -29,7 +52,7 @@ public class CubicBezier {
         if self.mX1 != self.mY1 || self.mX2 != self.mY2 {
             return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.mX1, aA2: self.mX2) }
         } else {
-            return []
+            return [Double](count: kSplineTableSize, repeatedValue: 0)
         }
     }()
     
@@ -45,6 +68,19 @@ public class CubicBezier {
         mX2 = outerMX2
         mY1 = outerMY1
         mY2 = outerMY2
+    }
+    
+    public init(controlPoints: (mX1: Double, mY1: Double, mX2: Double, mY2: Double)) {
+        assert((controlPoints.mX1 >= 0 && controlPoints.mX1 <= 1 && controlPoints.mX2 >= 0 && controlPoints.mX2 <= 1), "Bezier x values must be in [0, 1] range")
+        
+        mX1 = controlPoints.mX1
+        mX2 = controlPoints.mX2
+        mY1 = controlPoints.mY1
+        mY2 = controlPoints.mY2
+    }
+    
+    public convenience init(easing: Easing) {
+        self.init(controlPoints: easing.toControlPoints())
     }
     
     // MARK: - Private Methods
@@ -80,7 +116,7 @@ public class CubicBezier {
             }
             
             index += 1
-        } while (abs(currentT) > subdevusuibPrecision && index < subdevisionMaxInterations)
+        } while (abs(currentX) > subdevusuibPrecision && index < subdevisionMaxInterations)
         
         return currentT
     }
@@ -130,7 +166,7 @@ public class CubicBezier {
     
     // MARK: - Public Methods
     public func easing(x: Double) -> Double {
-        if x == 0 || x == 1 {
+        if (mX1 == mY1 && mX2 == mY2) || x == 0 || x == 1 {
             return x
         }
         
