@@ -34,3 +34,11 @@ for time in duraing {
     print("Count: \(countingNumber), At time: \(time)")
 }
 ```
+
+Migrate to Objective-C project
+=====================================
+Accorading ![Apple's document](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html), you need to `Update import statements in your Objective-C code (to #import "ProductModuleName-Swift.h")`.
+```objective-c
+#import "CHCubicBezier-Swift.h"
+```
+All done! Start to use CHCubicBezier!
