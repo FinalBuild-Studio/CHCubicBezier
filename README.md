@@ -1,30 +1,41 @@
 CHCubicBezier
 =====================================
-![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-2.2-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-1.0.0-blue.svg)
+![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-2.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-1.0.1-blue.svg)
 
-About
-=====================================
+## About
 CubicBezier provides cubic-bezier easing like CSS transition-timing-function `cubic-bezier` acts. Translated from npm-module ![bezier-easing](https://github.com/gre/bezier-easing) and implementation based on this ![article](http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/).
 
-Usage
-=====================================
+## Usage
 ```swift
 let cubicBezier = CubicBezier(mX1: 0, mY1: 0, mX2: 1, mY2: 0.5)
 cubicBezier.easing(0.0)  // 0
 cubicBezier.easing(0.5)  // 0.3125
 cubicBezier.easing(1.0)  // 1
 ```
+or
+```swift
+let cubicBezier = CubicBezier(controlPoints: (0.25, 0.1, 0.25, 0.1))
+```
+or
+```swift
+let cubicBezier = CubicBezier(easing: CubicBezier.Easing.Ease)
+```
+| enum                         | rawValue               |
+|------------------------------|------------------------|
+| CubicBezier.Easing.Ease      | (0.25, 0.1, 0.25, 0.1) |
+| CubicBezier.Easing.EaseIn    | (0.42, 0.0, 1.0, 1.0)  |
+| CubicBezier.Easing.EaseOut   | (0.0, 0.0, 0.58, 1.0)  |
+| CubicBezier.Easing.EaseInOut | (0.42, 0.0, 0.58, 1.0) |
+| CubicBezier.Easing.Linear    | (0, 0, 1, 1)           |
 
-Why CubicBezier instead of CoreAnimation
-=====================================
+## Why CubicBezier instead of CoreAnimation
 There are some CoreAnimation APIs provide for Bezier timing function, see ![CAMediaTimingFunction - getControlPointAtIndex](https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522057-getcontrolpointatindex?language=objc).
 
 However, the old APIs need to interact with C pointers. Of course, I'm not that familar to interact with C pointer, even though ![Apple's document here](https://developer.apple.com/swift/blog/?id=6) also said `Swift works hard to make interaction with C pointers convenient, because of their pervasiveness within Cocoa, while providing some level of safety`. And most important, the document is really unreadable. 
 
 Here is the problem what CubicBezier wants to solve, calculating B(t) value for building customized animation.
 
-Advanced Example
-=====================================
+## Advanced Example
 ```swift
 let cubicBezier = CubicBezier(mX1: 0, mY1: 0, mX2: 1, mY2: 0.5)
 let duraing: Int = 3  // Seconds
@@ -35,10 +46,38 @@ for time in duraing {
 }
 ```
 
-Migrate to Objective-C project
-=====================================
+## Install
+##### Via from [CocoaPods](https://github.com/CocoaPods/CocoaPods).
+Add `pod 'CHCubicBezier'` to your Podfile and run `pod install`
+```ruby
+platform :ios, '8.0'
+
+target 'MyApp' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'CHCubicBezier'
+
+  target 'MyAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MyAppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+```
+
+## Migrate to Objective-C project
 Accorading ![Apple's document](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html), you need to `Update import statements in your Objective-C code (to #import "ProductModuleName-Swift.h")`.
 ```objective-c
 #import "CHCubicBezier-Swift.h"
 ```
+
 All done! Start to use CHCubicBezier!
+
+## License
+Copyright (c) [Calvin Huang](https://github.com/Calvin-Huang). This software is licensed under the [MIT License](https://github.com/Calvin-Huang/CHRealHideUIView/blob/master/LICENSE).
