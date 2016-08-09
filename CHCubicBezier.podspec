@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "CHCubicBezier"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "CHCubicBezier provides Cubic-Bezier Curve easing calculating."
 
   s.description  = <<-DESC
@@ -40,7 +40,7 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "https://github.com/CapsLock-Studio/CHCubicBezier.git", :tag => "1.0.1" }
+  s.source       = { :git => "https://github.com/CapsLock-Studio/CHCubicBezier.git", :tag => "1.0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
