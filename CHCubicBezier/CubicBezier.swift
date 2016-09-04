@@ -26,7 +26,7 @@ public class CubicBezier {
         case EaseInOut
         case Linear
         
-        func toControlPoints() -> (Double, Double, Double, Double) {
+        public func toControlPoints() -> (Double, Double, Double, Double) {
             switch self {
             case .Ease:
                 return (0.25, 0.1, 0.25, 0.1)
@@ -49,34 +49,25 @@ public class CubicBezier {
     // Hmmmmm, Actually, I don't know why the source code have samples table
     // Or it should be removed?
     private lazy var sampleValues: [Double] = {
-        if self.mX1 != self.mY1 || self.mX2 != self.mY2 {
-            return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.mX1, aA2: self.mX2) }
+        if self.controlPoints.x1 != self.controlPoints.y1 || self.controlPoints.x2 != self.controlPoints.y2 {
+            return (0..<kSplineTableSize).map { self.calcBezier(Double($0) * kSampleStepSize, aA1: self.controlPoints.x1, aA2: self.controlPoints.x2) }
         } else {
             return [Double](count: kSplineTableSize, repeatedValue: 0)
         }
     }()
     
-    private let mX1: Double
-    private let mX2: Double
-    private let mY1: Double
-    private let mY2: Double
+    public let controlPoints: (x1: Double, x2: Double, y1: Double, y2: Double)
     
     public init(mX1 outerMX1: Double, mY1 outerMY1: Double, mX2 outerMX2: Double, mY2 outerMY2: Double) {
         assert((outerMX1 >= 0 && outerMX1 <= 1 && outerMX2 >= 0 && outerMX2 <= 1), "Bezier x values must be in [0, 1] range")
         
-        mX1 = outerMX1
-        mX2 = outerMX2
-        mY1 = outerMY1
-        mY2 = outerMY2
+        controlPoints = (outerMX1, outerMX2, outerMY1, outerMY2)
     }
     
-    public init(controlPoints: (mX1: Double, mY1: Double, mX2: Double, mY2: Double)) {
-        assert((controlPoints.mX1 >= 0 && controlPoints.mX1 <= 1 && controlPoints.mX2 >= 0 && controlPoints.mX2 <= 1), "Bezier x values must be in [0, 1] range")
+    public init(controlPoints: (x1: Double, y1: Double, x2: Double, y2: Double)) {
+        assert((controlPoints.x1 >= 0 && controlPoints.x1 <= 1 && controlPoints.x2 >= 0 && controlPoints.x2 <= 1), "Bezier x values must be in [0, 1] range")
         
-        mX1 = controlPoints.mX1
-        mX2 = controlPoints.mX2
-        mY1 = controlPoints.mY1
-        mY2 = controlPoints.mY2
+        self.controlPoints = controlPoints
     }
     
     public convenience init(easing: Easing) {
@@ -153,23 +144,23 @@ public class CubicBezier {
         let dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample])
         let guessForT = intervalStart + dist * kSampleStepSize
         
-        let initialSlope = getSlope(guessForT, aA1: mX1, aA2: mX2)
+        let initialSlope = getSlope(guessForT, aA1: controlPoints.x1, aA2: controlPoints.x2)
         
         if initialSlope >= newtownMinSlope {
-            return newtownRaphsonIterate(aX, aGuessT: guessForT, mX1: mX1, mX2: mX2)
+            return newtownRaphsonIterate(aX, aGuessT: guessForT, mX1: controlPoints.x1, mX2: controlPoints.x2)
         } else if initialSlope == 0 {
             return guessForT
         } else {
-            return binarySubdivide(aX, aA: intervalStart, aB: intervalStart + kSampleStepSize, mX1: mX1, mX2: mX2)
+            return binarySubdivide(aX, aA: intervalStart, aB: intervalStart + kSampleStepSize, mX1: controlPoints.x1, mX2: controlPoints.x2)
         }
     }
     
     // MARK: - Public Methods
     public func easing(x: Double) -> Double {
-        if (mX1 == mY1 && mX2 == mY2) || x == 0 || x == 1 {
+        if (controlPoints.x1 == controlPoints.y1 && controlPoints.x2 == controlPoints.y2) || x == 0 || x == 1 {
             return x
         }
         
-        return calcBezier(getTForX(x), aA1: mY1, aA2: mY2)
+        return calcBezier(getTForX(x), aA1: controlPoints.y1, aA2: controlPoints.y2)
     }
 }
