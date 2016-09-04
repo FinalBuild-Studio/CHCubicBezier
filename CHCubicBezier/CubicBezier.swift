@@ -56,12 +56,12 @@ public class CubicBezier {
         }
     }()
     
-    public let controlPoints: (x1: Double, x2: Double, y1: Double, y2: Double)
+    public let controlPoints: (x1: Double, y1: Double, x2: Double, y2: Double)
     
     public init(mX1 outerMX1: Double, mY1 outerMY1: Double, mX2 outerMX2: Double, mY2 outerMY2: Double) {
         assert((outerMX1 >= 0 && outerMX1 <= 1 && outerMX2 >= 0 && outerMX2 <= 1), "Bezier x values must be in [0, 1] range")
         
-        controlPoints = (outerMX1, outerMX2, outerMY1, outerMY2)
+        controlPoints = (outerMX1, outerMY1, outerMX2, outerMY2)
     }
     
     public init(controlPoints: (x1: Double, y1: Double, x2: Double, y2: Double)) {
