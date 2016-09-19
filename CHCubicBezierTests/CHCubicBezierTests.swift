@@ -18,7 +18,7 @@ class CHCubicBezierTests: XCTestCase {
     }
     
     func testCubicBezierEasingEase() {
-        let cubicBezierEasingEase = CubicBezier(easing: CubicBezier.Easing.Ease)
+        let cubicBezierEasingEase = CubicBezier(easing: CubicBezier.Easing.ease)
         XCTAssertEqual(cubicBezierEasingEase.easing(0.0), 0.0)
         XCTAssertEqual(cubicBezierEasingEase.easing(0.5), 0.40542312526365115)
         XCTAssertEqual(cubicBezierEasingEase.easing(0.6), 0.52220528235001173)
@@ -27,7 +27,7 @@ class CHCubicBezierTests: XCTestCase {
     }
     
     func testCubicBezierEasingEaseIn() {
-        let cubicBezierEasingEaseIn = CubicBezier(easing: CubicBezier.Easing.EaseIn)
+        let cubicBezierEasingEaseIn = CubicBezier(easing: CubicBezier.Easing.easeIn)
         XCTAssertEqual(cubicBezierEasingEaseIn.easing(0.0), 0.0)
         XCTAssertEqual(cubicBezierEasingEaseIn.easing(0.5), 0.3153567342653617)
         XCTAssertEqual(cubicBezierEasingEaseIn.easing(0.6), 0.42911907698767621)
@@ -36,7 +36,7 @@ class CHCubicBezierTests: XCTestCase {
     }
     
     func testCubicBezierEasingEaseOut() {
-        let cubicBezierEasingEaseOut = CubicBezier(easing: CubicBezier.Easing.EaseOut)
+        let cubicBezierEasingEaseOut = CubicBezier(easing: CubicBezier.Easing.easeOut)
         XCTAssertEqual(cubicBezierEasingEaseOut.easing(0.0), 0.0)
         XCTAssertEqual(cubicBezierEasingEaseOut.easing(0.5), 0.68464326573463841)
         XCTAssertEqual(cubicBezierEasingEaseOut.easing(0.6), 0.78513906125636046)
@@ -45,7 +45,7 @@ class CHCubicBezierTests: XCTestCase {
     }
     
     func testCubicBezierEasingEaseInOut() {
-        let cubicBezierEasingEaseInOut = CubicBezier(easing: CubicBezier.Easing.EaseInOut)
+        let cubicBezierEasingEaseInOut = CubicBezier(easing: CubicBezier.Easing.easeInOut)
         XCTAssertEqual(cubicBezierEasingEaseInOut.easing(0.0), 0.0)
         XCTAssertEqual(cubicBezierEasingEaseInOut.easing(0.5), 0.5)
         XCTAssertEqual(cubicBezierEasingEaseInOut.easing(0.6), 0.668116153265794)
@@ -54,7 +54,7 @@ class CHCubicBezierTests: XCTestCase {
     }
     
     func testCubicBezierEasingEaseLinear() {
-        let cubicBezierEasingLinear = CubicBezier(easing: CubicBezier.Easing.Linear)
+        let cubicBezierEasingLinear = CubicBezier(easing: CubicBezier.Easing.linear)
         XCTAssertEqual(cubicBezierEasingLinear.easing(0.0), 0.0)
         XCTAssertEqual(cubicBezierEasingLinear.easing(0.5), 0.5)
         XCTAssertEqual(cubicBezierEasingLinear.easing(1.0), 1.0)
