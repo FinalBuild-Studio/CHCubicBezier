@@ -1,6 +1,6 @@
 CHCubicBezier
 =====================================
-![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-2.x-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-1.0.3-blue.svg)
+![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-3.0-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-2.0.0-blue.svg)
 
 ## About
 CubicBezier provides cubic-bezier easing like CSS transition-timing-function `cubic-bezier` acts. Translated from npm-module [bezier-easing](https://github.com/gre/bezier-easing) and implementation based on this [article](http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/).
@@ -18,18 +18,18 @@ let cubicBezier = CubicBezier(controlPoints: (0.25, 0.1, 0.25, 0.1))
 ```
 or
 ```swift
-let cubicBezier = CubicBezier(easing: CubicBezier.Easing.Ease)
+let cubicBezier = CubicBezier(easing: CubicBezier.Easing.ease)
 ```
 | enum                         | rawValue               |
 |------------------------------|------------------------|
-| CubicBezier.Easing.Ease      | (0.25, 0.1, 0.25, 0.1) |
-| CubicBezier.Easing.EaseIn    | (0.42, 0.0, 1.0, 1.0)  |
-| CubicBezier.Easing.EaseOut   | (0.0, 0.0, 0.58, 1.0)  |
-| CubicBezier.Easing.EaseInOut | (0.42, 0.0, 0.58, 1.0) |
-| CubicBezier.Easing.Linear    | (0, 0, 1, 1)           |
-You can also get current control points from `CubicBezier` instance or `CubicBezier.Easing`.
+| CubicBezier.Easing.ease      | (0.25, 0.1, 0.25, 0.1) |
+| CubicBezier.Easing.easeIn    | (0.42, 0.0, 1.0, 1.0)  |
+| CubicBezier.Easing.easeOut   | (0.0, 0.0, 0.58, 1.0)  |
+| CubicBezier.Easing.easeInOut | (0.42, 0.0, 0.58, 1.0) |
+| CubicBezier.Easing.linear    | (0, 0, 1, 1)           |
+You can also get current control points from `CubicBezier` instance or `CubicBezier.easing`.
 ```swift
-CubicBezier.Easing.Ease.toControlPoints() // (0.25, 0.1, 0.25, 0.1)
+CubicBezier.Easing.ease.toControlPoints() // (0.25, 0.1, 0.25, 0.1)
 
 let cubicBezier = CubicBezier(controlPoints: (0.25, 0.1, 0.25, 0.1))
 cubicBezier.controlPoints // // (0.25, 0.1, 0.25, 0.1)
@@ -74,6 +74,18 @@ target 'MyApp' do
   end
 end
 
+```
+
+⚠️ Add follwing lines to your Podfile for Xcode 8.0 and Swift 3.0 ⚠️
+```ruby
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
+    end
+  end
+end
 ```
 
 ## Migrate to Objective-C project
