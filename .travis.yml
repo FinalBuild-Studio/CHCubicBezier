@@ -1,4 +1,11 @@
 language: objective-c
 osx_image: xcode8
-# script: xctool -project CHCubicBezier.xcodeproj -scheme CHCubicBezier -sdk iphonesimulator test
-script: xcodebuild -project CHCubicBezier.xcodeproj -scheme CHCubicBezier -sdk iphonesimulator test
+env:
+  matrix:
+    - DANGER=1
+    - TEST="iOS"
+    - TEST="OSX"
+    - TEST="watchOS"
+    - TEST="tvOS"
+    - TEST="iOS-Example"
+# script: xcodebuild -project CHCubicBezier.xcodeproj -scheme CHCubicBezier -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' -sdk iphonesimulator test
