@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "CHCubicBezier"
-  s.version      = "1.0.4"
+  s.version      = "2.0.0"
   s.summary      = "CHCubicBezier provides Cubic-Bezier Curve easing calculating."
 
   s.description  = <<-DESC
