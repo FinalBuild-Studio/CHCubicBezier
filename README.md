@@ -1,6 +1,6 @@
 CHCubicBezier
 =====================================
-![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-3.0-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-2.0.0-blue.svg)
+![](https://travis-ci.org/CapsLock-Studio/CHCubicBezier.svg?branch=master) ![swift-version](https://img.shields.io/badge/Swfit-3.0-orange.svg) ![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20OSX%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg) ![pod](https://img.shields.io/badge/pod-2.0.0-blue.svg)[![SPM ready](https://img.shields.io/badge/SPM-ready-orange.svg)](https://www.swift.org)
 
 ## About
 CubicBezier provides cubic-bezier easing like CSS transition-timing-function `cubic-bezier` acts. Translated from npm-module [bezier-easing](https://github.com/gre/bezier-easing) and implementation based on this [article](http://greweb.me/2012/02/bezier-curve-based-easing-functions-from-concept-to-implementation/).
@@ -88,8 +88,21 @@ post_install do |installer|
 end
 ```
 
+##### Via from [Swift Package Manager](https://github.com/apple/swift-package-manager)
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "MyProject",
+    dependencies: [
+        .Package(url: "https://github.com/CapsLock-Studio/CHCubicBezier", majorVersion: 0)
+    ]
+)
+```
+
+
 ## Migrate to Objective-C project
-Accorading ![Apple's document](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html), you need to `Update import statements in your Objective-C code (to #import "ProductModuleName-Swift.h")`.
+Accorading [Apple's document](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/BuildingCocoaApps/Migration.html), you need to `Update import statements in your Objective-C code (to #import "ProductModuleName-Swift.h")`.
 ```objective-c
 #import "CHCubicBezier-Swift.h"
 // or

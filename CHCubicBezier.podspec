@@ -44,7 +44,7 @@ Implementation base on [bezier-easing](https://github.com/gre/bezier-easing).
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source_files  = "CHCubicBezier/CubicBezier.swift"
+  s.source_files  = "Soueces/CubicBezier.swift"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

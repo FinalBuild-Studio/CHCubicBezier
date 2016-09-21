@@ -12,20 +12,12 @@
 		1898F7C01D1BBE2F00511258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F7BE1D1BBE2F00511258 /* Main.storyboard */; };
 		1898F7C21D1BBE2F00511258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1898F7C11D1BBE2F00511258 /* Assets.xcassets */; };
 		1898F7C51D1BBE2F00511258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */; };
-		1898F7D01D1BBE3000511258 /* CHCubicBezierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7CF1D1BBE3000511258 /* CHCubicBezierTests.swift */; };
-		1898F7DB1D1BBE3000511258 /* CHCubicBezierUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */; };
-		1898F7EC1D1BCBD300511258 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1898F7EB1D1BCBD300511258 /* CubicBezier.swift */; };
+		18D8CB971D9232A800BCFBF1 /* CubicBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8CB961D9232A800BCFBF1 /* CubicBezier.swift */; };
+		18D8CB9A1D92332000BCFBF1 /* CHCubicBezierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8CB991D92332000BCFBF1 /* CHCubicBezierTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1898F7CC1D1BBE3000511258 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1898F7AF1D1BBE2F00511258 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1898F7B61D1BBE2F00511258;
-			remoteInfo = CHCubicBezier;
-		};
-		1898F7D71D1BBE3000511258 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1898F7AF1D1BBE2F00511258 /* Project object */;
 			proxyType = 1;
@@ -43,12 +35,9 @@
 		1898F7C41D1BBE2F00511258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1898F7C61D1BBE2F00511258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1898F7CB1D1BBE3000511258 /* CHCubicBezierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHCubicBezierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1898F7CF1D1BBE3000511258 /* CHCubicBezierTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCubicBezierTests.swift; sourceTree = "<group>"; };
-		1898F7D11D1BBE3000511258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1898F7D61D1BBE3000511258 /* CHCubicBezierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHCubicBezierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHCubicBezierUITests.swift; sourceTree = "<group>"; };
-		1898F7DC1D1BBE3000511258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1898F7EB1D1BCBD300511258 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicBezier.swift; sourceTree = "<group>"; };
+		18D8CB961D9232A800BCFBF1 /* CubicBezier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CubicBezier.swift; path = Sources/CubicBezier.swift; sourceTree = SOURCE_ROOT; };
+		18D8CB991D92332000BCFBF1 /* CHCubicBezierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CHCubicBezierTests.swift; path = Tests/CHCubicBezierTests/CHCubicBezierTests.swift; sourceTree = SOURCE_ROOT; };
+		18D8CBD41D92344200BCFBF1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/CHCubicBezierTests/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1898F7D31D1BBE3000511258 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +63,6 @@
 			children = (
 				1898F7B91D1BBE2F00511258 /* CHCubicBezier */,
 				1898F7CE1D1BBE3000511258 /* CHCubicBezierTests */,
-				1898F7D91D1BBE3000511258 /* CHCubicBezierUITests */,
 				1898F7B81D1BBE2F00511258 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +72,6 @@
 			children = (
 				1898F7B71D1BBE2F00511258 /* CHCubicBezier.app */,
 				1898F7CB1D1BBE3000511258 /* CHCubicBezierTests.xctest */,
-				1898F7D61D1BBE3000511258 /* CHCubicBezierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +79,13 @@
 		1898F7B91D1BBE2F00511258 /* CHCubicBezier */ = {
 			isa = PBXGroup;
 			children = (
+				18D8CB961D9232A800BCFBF1 /* CubicBezier.swift */,
 				1898F7BA1D1BBE2F00511258 /* AppDelegate.swift */,
 				1898F7BC1D1BBE2F00511258 /* ViewController.swift */,
 				1898F7BE1D1BBE2F00511258 /* Main.storyboard */,
 				1898F7C11D1BBE2F00511258 /* Assets.xcassets */,
 				1898F7C31D1BBE2F00511258 /* LaunchScreen.storyboard */,
 				1898F7C61D1BBE2F00511258 /* Info.plist */,
-				1898F7EB1D1BCBD300511258 /* CubicBezier.swift */,
 			);
 			path = CHCubicBezier;
 			sourceTree = "<group>";
@@ -113,19 +93,10 @@
 		1898F7CE1D1BBE3000511258 /* CHCubicBezierTests */ = {
 			isa = PBXGroup;
 			children = (
-				1898F7CF1D1BBE3000511258 /* CHCubicBezierTests.swift */,
-				1898F7D11D1BBE3000511258 /* Info.plist */,
+				18D8CB991D92332000BCFBF1 /* CHCubicBezierTests.swift */,
+				18D8CBD41D92344200BCFBF1 /* Info.plist */,
 			);
 			path = CHCubicBezierTests;
-			sourceTree = "<group>";
-		};
-		1898F7D91D1BBE3000511258 /* CHCubicBezierUITests */ = {
-			isa = PBXGroup;
-			children = (
-				1898F7DA1D1BBE3000511258 /* CHCubicBezierUITests.swift */,
-				1898F7DC1D1BBE3000511258 /* Info.plist */,
-			);
-			path = CHCubicBezierUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +137,6 @@
 			productReference = 1898F7CB1D1BBE3000511258 /* CHCubicBezierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1898F7D51D1BBE3000511258 /* CHCubicBezierUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1898F7E51D1BBE3000511258 /* Build configuration list for PBXNativeTarget "CHCubicBezierUITests" */;
-			buildPhases = (
-				1898F7D21D1BBE3000511258 /* Sources */,
-				1898F7D31D1BBE3000511258 /* Frameworks */,
-				1898F7D41D1BBE3000511258 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1898F7D81D1BBE3000511258 /* PBXTargetDependency */,
-			);
-			name = CHCubicBezierUITests;
-			productName = CHCubicBezierUITests;
-			productReference = 1898F7D61D1BBE3000511258 /* CHCubicBezierUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,11 +153,6 @@
 						LastSwiftMigration = 0800;
 					};
 					1898F7CA1D1BBE3000511258 = {
-						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0800;
-						TestTargetID = 1898F7B61D1BBE2F00511258;
-					};
-					1898F7D51D1BBE3000511258 = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0800;
 						TestTargetID = 1898F7B61D1BBE2F00511258;
@@ -226,7 +174,6 @@
 			targets = (
 				1898F7B61D1BBE2F00511258 /* CHCubicBezier */,
 				1898F7CA1D1BBE3000511258 /* CHCubicBezierTests */,
-				1898F7D51D1BBE3000511258 /* CHCubicBezierUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,13 +196,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1898F7D41D1BBE3000511258 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -263,9 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D8CB971D9232A800BCFBF1 /* CubicBezier.swift in Sources */,
 				1898F7BD1D1BBE2F00511258 /* ViewController.swift in Sources */,
 				1898F7BB1D1BBE2F00511258 /* AppDelegate.swift in Sources */,
-				1898F7EC1D1BCBD300511258 /* CubicBezier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,15 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1898F7D01D1BBE3000511258 /* CHCubicBezierTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1898F7D21D1BBE3000511258 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1898F7DB1D1BBE3000511258 /* CHCubicBezierUITests.swift in Sources */,
+				18D8CB9A1D92332000BCFBF1 /* CHCubicBezierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,11 +224,6 @@
 			isa = PBXTargetDependency;
 			target = 1898F7B61D1BBE2F00511258 /* CHCubicBezier */;
 			targetProxy = 1898F7CC1D1BBE3000511258 /* PBXContainerItemProxy */;
-		};
-		1898F7D81D1BBE3000511258 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1898F7B61D1BBE2F00511258 /* CHCubicBezier */;
-			targetProxy = 1898F7D71D1BBE3000511258 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -438,10 +365,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CHCubicBezierTests/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Tests/CHCubicBezierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.capslock.CHCubicBezierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHCubicBezier.app/CHCubicBezier";
 			};
@@ -451,36 +381,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CHCubicBezierTests/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Tests/CHCubicBezierTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.capslock.CHCubicBezierTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHCubicBezier.app/CHCubicBezier";
-			};
-			name = Release;
-		};
-		1898F7E61D1BBE3000511258 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CHCubicBezierUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.capslock.CHCubicBezierUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = CHCubicBezier;
-			};
-			name = Debug;
-		};
-		1898F7E71D1BBE3000511258 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CHCubicBezierUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.capslock.CHCubicBezierUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = CHCubicBezier;
 			};
 			name = Release;
 		};
@@ -510,15 +418,6 @@
 			buildConfigurations = (
 				1898F7E31D1BBE3000511258 /* Debug */,
 				1898F7E41D1BBE3000511258 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1898F7E51D1BBE3000511258 /* Build configuration list for PBXNativeTarget "CHCubicBezierUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1898F7E61D1BBE3000511258 /* Debug */,
-				1898F7E71D1BBE3000511258 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
