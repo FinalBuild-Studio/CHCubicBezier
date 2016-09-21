@@ -89,13 +89,14 @@ end
 ```
 
 ##### Via from [Swift Package Manager](https://github.com/apple/swift-package-manager)
+CHCubicBezier support Swift Package Manager above version 2.0.0.
 ```swift
 import PackageDescription
 
 let package = Package(
     name: "MyProject",
     dependencies: [
-        .Package(url: "https://github.com/CapsLock-Studio/CHCubicBezier", majorVersion: 0)
+        .Package(url: "https://github.com/CapsLock-Studio/CHCubicBezier", majorVersion: 2)
     ]
 )
 ```
